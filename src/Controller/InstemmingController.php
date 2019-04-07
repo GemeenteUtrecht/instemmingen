@@ -3,11 +3,11 @@
 
 namespace App\Controller;
 
-use App\Entity\Huwelijk;
+use App\Entity\Token;
 
-class HuwelijkController
+class InstemmingController
 {
-	public function __invoke(Huwelijk $data): Huwelijk
+	public function __invoke(Token $data): Tokens
 	{
 		//$this->bookPublishingHandler->handle($data);
 		
