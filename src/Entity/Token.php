@@ -27,7 +27,7 @@ use App\Controller\TokenController;
  * @version    	1.0
  *
  * @link   		http//:www.conduction.nl
- * @package		Commen Ground
+ * @package		Common Ground
  * @subpackage  Instemming
  *  
  * @ApiResource( 
@@ -37,6 +37,7 @@ use App\Controller\TokenController;
  *  		"denormalizationContext"={"groups"={"write"}},
  *      	"path"="/tokens",
  *  		"openapi_context" = {
+ * 				"summary" = "Haalt een verzameling van tokens op"
  *  		}
  *  	},
  *  	"post"={
@@ -44,6 +45,7 @@ use App\Controller\TokenController;
  *  		"denormalizationContext"={"groups"={"write"}},
  *      	"path"="/tokens",
  *  		"openapi_context" = {
+ * 					"summary" = "Maak een token aan"
  *  		}
  *  	}, 
  *  },
@@ -53,6 +55,7 @@ use App\Controller\TokenController;
  *  		"denormalizationContext"={"groups"={"write"}},
  *      	"path"="/tokens/{id}",
  *  		"openapi_context" = {
+ * 				"summary" = "Haal een specifiek token op"
  *  		}
  *  	},
  *     "put"={
@@ -60,6 +63,7 @@ use App\Controller\TokenController;
  *  		"denormalizationContext"={"groups"={"write"}},
  *      	"path"="/tokens/{id}",
  *  		"openapi_context" = {
+ *  				"summary" = "Vervang een specifiek token"
  *  		}
  *  	},
  *     "delete"={
@@ -67,6 +71,7 @@ use App\Controller\TokenController;
  *  		"denormalizationContext"={},
  *      	"path"="/tokens/{id}",
  *  		"openapi_context" = {
+ * 				"summary" = "Verwijder een specifiek token"
  *  		}
  *  	},
  *     "person"={
@@ -180,7 +185,7 @@ use App\Controller\TokenController;
  *         				"description" = "Ongeldige aanvraag"
  *         			},
  *         			"404" = {
- *         				"description" = "Huwelijk of aanvraag niet gevonden"
+ *         				"description" = "Token niet gevonden"
  *         			}
  *            	}            
  *         }
@@ -213,7 +218,7 @@ class Token implements StringableInterface
 	 * )
 	 * @Assert\Length(
 	 *      max = 40,
-	 *      maxMessage = "Het RSIN kan niet langer dan {{ limit }} karakters zijn"
+	 *      maxMessage = "Het RSIN kan niet langer dan {{ limit }} tekens zijn"
 	 * )
 	 * @Groups({"read", "write"})
 	 * @ApiProperty(
@@ -326,7 +331,7 @@ class Token implements StringableInterface
 	}
 	
 	/**
-	 * Vanuit rendering perspectief (voor bijvoorbeeld loging of berichten) is het belangrijk dat we een entiteit altijd naar string kunnen omzetten
+	 * Vanuit rendering perspectief (voor bijvoorbeeld logging of berichten) is het belangrijk dat we een entiteit altijd naar string kunnen omzetten
 	 */
 	public function __toString()
 	{
