@@ -11,9 +11,9 @@ info:
     Om het voor andere partijen zo makkelijk mogenlijk te maken dit component bieden we zo veel mogenlijk informatie openbaar aan.  
     - [datamodel als pdf](/schema/datamodel.pdf)
     - [datamodel als mwb](/schema/datamodel.mwb)
-    - [codebase op github](https://github.com/GemeenteUtrecht/contactregistraties)
-    - [codebase als zip](https://github.com/GemeenteUtrecht/contactregistraties/master.zip)
-    - [docker container](https://hub.docker.com/r/huwelijksplanner/contactregistraties-component)
+    - [codebase op github](https://github.com/GemeenteUtrecht/instemmingen)
+    - [codebase als zip](https://github.com/GemeenteUtrecht/instemmingen/master.zip)
+    - [docker container](https://hub.docker.com/r/huwelijksplanner/instemmingen-component)
     - [online demo](http://instemmingen.demo.zaakonline.nl/)
     
     # OpenAPI Specification
