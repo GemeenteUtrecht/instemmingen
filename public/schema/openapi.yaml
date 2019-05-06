@@ -1,7 +1,7 @@
 openapi: 3.0.2
 info:
   description: |
-    # Welkom innovator! <br>
+    # Welkom innovator!
     Fijn dat je de tijd en moeite hebt genomen om je te verdiepen in dit component. Het "Instemmingen" component is ontwikkeld voor de gemeente Utrecht en heeft als doel om vast te stellen wat de intenties van personen of instanties zijn. Dit component maakt gebruik van tokens of digid voor het ondertekenen van intenties, verzoeken of documenten.
     
     # Ondersteuning
