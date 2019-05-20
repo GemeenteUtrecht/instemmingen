@@ -86,7 +86,7 @@ use App\Controller\TokenController;
  *     	   "denormalization_context"={"groups"={"person"}},
  *         "openapi_context" = {
  *         		"summary" = "Koppel BSN",
- *         		"description" = "Koppel een BSN nummer aan deze token aan de hand van een digid controlle",
+ *         		"description" = "Koppel een BSN nummer aan deze token aan de hand van een digid controle.",
  *          	"consumes" = {
  *              	"application/json",
  *               	"text/html",
@@ -198,7 +198,7 @@ class Token implements StringableInterface
 	private $token;
 	
 	/**
-	 * De unieke identificatie van dit object binnen de organisatie die dit object heeft gecreeerd. <br /><b>Schema:</b> <a href="https://schema.org/identifier">https://schema.org/identifier</a>
+	 * De unieke identificatie van dit object binnen de organisatie die dit object heeft gecreëerd. <br /><b>Schema:</b> <a href="https://schema.org/identifier">https://schema.org/identifier</a>
 	 *
 	 * @var string
 	 * @ORM\Column(
@@ -216,7 +216,7 @@ class Token implements StringableInterface
 	 *         "openapi_context"={
 	 *             "type"="string",
 	 *             "example"="6a36c2c4-213e-4348-a467-dfa3a30f64aa",
-	 *             "description"="De unieke identificatie van dit object de organisatie die dit object heeft gecreeerd.",
+	 *             "description"="De unieke identificatie van dit object de organisatie die dit object heeft gecreëerd.",
 	 *             "maxLength"=40
 	 *         }
 	 *     }
@@ -226,7 +226,7 @@ class Token implements StringableInterface
 	public $identificatie;
 	
 	/**
-	 * Het RSIN van de organisatie waartoe deze Token behoord. Dit moet een geldig RSIN zijn van 9 nummers en voldoen aan https://nl.wikipedia.org/wiki/Burgerservicenummer#11-proef. <br> Het RSIN word bepaald aan de hand van de gauthenticeerde applicatie en kan niet worden overschreven
+	 * Het RSIN van de organisatie waartoe deze Token behoort. Dit moet een geldig RSIN zijn van 9 nummers en voldoen aan https://nl.wikipedia.org/wiki/Burgerservicenummer#11-proef. <br> Het RSIN wordt bepaald aan de hand van de geauthenticeerde applicatie en kan niet worden overschreven
 	 *
 	 * @var integer
 	 * @ORM\Column(
@@ -258,7 +258,7 @@ class Token implements StringableInterface
 	public $bronOrganisatie;	
 	
 	/**
-	 * @var string Een "Y-m-d H:i:s" waarde bijv. "2018-12-31 13:33:05" ofwel "Jaar-dag-maand uur:minut:seconde"
+	 * @var string Een "Y-m-d H:i:s" waarde bijv. "2018-12-31 13:33:05" ofwel "Jaar-dag-maand uur:minuut:seconde"
 	 * @Assert\DateTime
 	 * @ORM\Column(
 	 *     type     = "datetime",
@@ -269,7 +269,7 @@ class Token implements StringableInterface
 	public $acceptatieDatum;
 	
 	/**
-	 * @var string Een "Y-m-d H:i:s" waarde bijv. "2018-12-31 13:33:05" ofwel "Jaar-dag-maand uur:minut:seconde"
+	 * @var string Een "Y-m-d H:i:s" waarde bijv. "2018-12-31 13:33:05" ofwel "Jaar-dag-maand uur:minuut:seconde"
 	 * @Assert\DateTime
 	 * @ORM\Column(
 	 *     type     = "datetime",
@@ -291,7 +291,7 @@ class Token implements StringableInterface
 	public $objectType;
 	
 	/**
-	 * Het identificatie nummer van het object waar deze token aan vast zit <br /><br /><b>Schema:</b> <a href="https://schema.org/identifier">https://schema.org/identifier</a>
+	 * Het identificatienummer van het object waar deze token aan vast zit <br /><br /><b>Schema:</b> <a href="https://schema.org/identifier">https://schema.org/identifier</a>
 	 *
 	 * @var string
 	 *
@@ -304,7 +304,7 @@ class Token implements StringableInterface
 	public $objectId;
 	
 	/**
-	 * @var string Een "Y-m-d H:i:s" waarde bijv. "2018-12-31 13:33:05" ofwel "Jaar-dag-maand uur:minut:seconde"
+	 * @var string Een "Y-m-d H:i:s" waarde bijv. "2018-12-31 13:33:05" ofwel "Jaar-dag-maand uur:minuut:seconde"
 	 * @Assert\DateTime
 	 * @ORM\Column(
 	 *     type     = "datetime",
@@ -315,7 +315,7 @@ class Token implements StringableInterface
 	public $gebruikt;
 	
 	/**
-	 * @var string Een "Y-m-d H:i:s" waarde bijv. "2018-12-31 13:33:05" ofwel "Jaar-dag-maand uur:minut:seconde"
+	 * @var string Een "Y-m-d H:i:s" waarde bijv. "2018-12-31 13:33:05" ofwel "Jaar-dag-maand uur:minuut:seconde"
 	 * @Assert\DateTime
 	 * @ORM\Column(
 	 *     type     = "datetime",
@@ -353,7 +353,7 @@ class Token implements StringableInterface
 	public $wijzigingsdatum;
 	
 	/**
-	 * Het contact persoon voor deze Token
+	 * De contactpersoon voor deze Token
 	 *
 	 * @ORM\Column(
 	 *     type     = "string",
